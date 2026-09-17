@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สาขาที่สมัคร - มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo-section">
+        <img src="/logo_kmutnb.png" alt="มจพ." class="logo">
+        <div class="title-group">
+          <h1 class="main-title">รับสมัครนักศึกษา</h1>
+          <p class="sub-title">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> หน้าแรก</a>
+      <a href="schedule.html" class="nav-link active"><i class="fa-solid fa-user-pen"></i> สมัครเรียน</a>
+      <a href="check-status.html" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i> ตรวจสอบสถานะ</a>
+      <a href="search-faculty.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> ค้นหาคณะ / สาขา</a>
+    </div>
+  </nav>
+
+  <!-- Title Page Header -->
+  <section class="page-header">
+    <h2>สาขาที่สมัคร</h2>
+  </section>
+
+  <!-- Main Content Section -->
+  <main class="select-major-section">
+    <div class="container">
+      <form action="upload-documents.html" method="GET" class="select-major-form">
+        
+        <!-- Radio Selector สำหรับเลือกภาควิชา -->
+        <input type="radio" name="dept_choice" id="dept1_radio" class="dept-toggle" checked hidden>
+        <input type="radio" name="dept_choice" id="dept2_radio" class="dept-toggle" hidden>
+
+        <!-- เลือกภาควิชา -->
+        <div class="form-row">
+          <label class="row-label">เลือกภาควิชาที่ต้องการสมัคร</label>
+          <div class="radio-options">
+            <label for="dept1_radio" class="radio-item">
+              <span class="custom-radio"></span>
+              <span>ภาควิชาเทคโนโลยีสารสนเทศ</span>
+            </label>
+            <label for="dept2_radio" class="radio-item">
+              <span class="custom-radio"></span>
+              <span>ภาควิชาวิศวกรรมเครื่องมือวัดและพลังงานไฟฟ้า</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- เลือกสาขา (ภาควิชาเทคโนโลยีสารสนเทศ) -->
+        <div class="form-row major-select-group dept1-select">
+          <label for="major_dept1" class="row-label">เลือกสาขา (ภาควิชาเทคโนโลยีสารสนเทศ)</label>
+          <div class="select-wrapper">
+            <select id="major_dept1" name="major" required>
+              <option value="" disabled selected>-- กรุณาเลือกสาขา --</option>
+              <option value="major1">สาขาวิชาเทคโนโลยีสารสนเทศ (IT)</option>
+              <option value="major2">สาขาวิชาเทคโนโลยีสารสนเทศ (ITI)</option>
+              <option value="major3">สาขาวิชาเทคโนโลยีสารสนเทศ (ITT)</option>
+              <option value="major4">สาขาวิชาวิศวกรรมสารสนเทศและเครือข่าย (INET)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- เลือกสาขา (ภาควิชาวิศวกรรมเครื่องมือวัดฯ) -->
+        <div class="form-row major-select-group dept2-select">
+          <label for="major_dept2" class="row-label">เลือกสาขา (ภาควิชาวิศวกรรมเครื่องมือวัดฯ)</label>
+          <div class="select-wrapper">
+            <select id="major_dept2" name="major" required>
+              <option value="" disabled selected>-- กรุณาเลือกสาขา --</option>
+              <option value="major5">สาขาวิชาวิศวกรรมเครื่องมือวัดและอัตโนมัติ (InAE)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a href="education-history.html" class="btn-action btn-back-link">ย้อนกลับ</a>
+          <a href="/upload-documents.html" class="btn-action btn-back-link">ถัดไป</a>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      
+      <div class="footer-col">
+        <h3 class="footer-title">ติดต่อเรา</h3>
+        <p class="org-name">กลุ่มงานรับเข้าศึกษา กองบริการการศึกษา</p>
+        <p>สำนักงานอธิการบดี ชั้น 2 อาคาร TGGS</p>
+        <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+        <p class="address-detail"><i class="fa-solid fa-location-dot"></i> 1518 ถนนประชาราษฎร์ 1 แขวงวงศ์สว่าง เขตบางซื่อ กรุงเทพฯ 10800</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">ช่องทางการติดต่อ</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone"></i> <span>+66 2 555-2000 ต่อ 1626, 1627</span></li>
+          <li><i class="fa-solid fa-print"></i> <span>+66 2 552-171</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:admission@kmutnb.ac.th">admission@kmutnb.ac.th</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">ข้อมูลเพิ่มเติม</h3>
+        <div class="campus-card">
+          <div class="campus-header">
+            <span><i class="fa-solid fa-building-columns"></i> วิทยาเขต</span>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+          </div>
+          <ul class="campus-list">
+            <li><a href="#">กรุงเทพมหานคร</a></li>
+            <li><a href="#">ระยอง</a></li>
+            <li><a href="#">ปราจีนบุรี</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© King Mongkut's University of Technology North Bangkok. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

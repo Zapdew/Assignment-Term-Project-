@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ลงทะเบียน - มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+ 
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo-section">
+        <img src="/logo_kmutnb.png" alt="มจพ." class="logo">
+        <div class="title-group">
+          <h1 class="main-title">รับสมัครนักศึกษา</h1>
+          <p class="sub-title">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+        </div>
+    </div>
+  </header>
+
+  
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/index.html" class="nav-link active"><i class="fa-solid fa-house"></i> หน้าแรก</a>
+      <a href="/schedule.html" class="nav-link"><i class="fa-solid fa-user-pen"></i> สมัครเรียน</a>
+      <a href="/check-status.html" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i> ตรวจสอบสถานะ</a>
+      <a href="/search-faculty.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> ค้นหาคณะ / สาขา</a>
+    </div>
+  </nav>
+
+ 
+  <section class="page-header">
+    <h2>ลงทะเบียน</h2>
+  </section>
+
+  <main class="register-section">
+    <div class="container">
+      <form action="login.html" method="POST" class="register-form">
+        
+        <div class="form-card">
+          <h3 class="form-card-title">ข้อมูลเบื้องต้น</h3>
+          
+          <div class="form-grid">
+           
+            <div class="form-group-reg">
+              <label for="firstname">ชื่อ <span class="required">*</span></label>
+              <input type="text" id="firstname" name="firstname" required>
+            </div>
+
+            
+            <div class="form-group-reg">
+              <label for="lastname">นามสกุล <span class="required">*</span></label>
+              <input type="text" id="lastname" name="lastname" required>
+            </div>
+
+           
+            <div class="form-group-reg">
+              <label for="email">อีเมล <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+           
+            <div class="form-group-reg">
+              <label for="confirm_email">ยืนยันอีเมล <span class="required">*</span></label>
+              <input type="email" id="confirm_email" name="confirm_email" required>
+            </div>
+
+           
+            <div class="form-group-reg">
+              <label for="password">รหัสผ่าน <span class="required">*</span></label>
+              <input type="password" id="password" name="password" placeholder="รหัสผ่านควรประกอบด้วยตัวพิมพ์ใหญ่ ตัวพิมพ์เล็ก และตัวเลข รวมกัน 8 ตัวขึ้นไป" required>
+            </div>
+
+            
+            <div class="form-group-reg">
+              <label for="confirm_password">ยืนยันรหัสผ่าน <span class="required">*</span></label>
+              <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="form-card">
+          <h3 class="form-card-title">โปรไฟล์</h3>
+
+          <div class="form-grid">
+            
+            <div class="form-group-reg">
+              <label for="phone">เบอร์โทรศัพท์ <span class="required">*</span></label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            
+            <div class="form-group-reg">
+              <label for="dob">วันเกิด <span class="required">*</span></label>
+              <input type="date" id="dob" name="dob" required>
+            </div>
+
+           
+            <div class="form-group-reg">
+              <label for="address">ที่อยู่ <span class="required">*</span></label>
+              <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+
+            
+            <div class="form-group-reg">
+              <label>เพศ <span class="required">*</span></label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  ชาย <input type="radio" name="gender" value="male" required>
+                </label>
+                <label class="radio-label">
+                  หญิง <input type="radio" name="gender" value="female">
+                </label>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="form-checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="agree" required>
+              โปรดตรวจเช็คข้อมูลให้ถูกต้องและครบถ้วนก่อนกรดยืนยันการลงทะเบียน <span class="required">*</span>
+            </label>
+          </div>
+
+        
+          <div class="form-actions">
+            <button type="button" class="btn" onclick="history.back()">ย้อนกลับ</button>
+            <a href="index.html" class="btn">ลงทะเบียน</a>
+          </div>
+          
+
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      
+      <div class="footer-col">
+        <h3 class="footer-title">ติดต่อเรา</h3>
+        <p class="org-name">กลุ่มงานรับเข้าศึกษา กองบริการการศึกษา</p>
+        <p>สำนักงานอธิการบดี ชั้น 2 อาคาร TGGS</p>
+        <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+        <p class="address-detail"><i class="fa-solid fa-location-dot"></i> 1518 ถนนประชาราษฎร์ 1 แขวงวงศ์สว่าง เขตบางซื่อ กรุงเทพฯ 10800</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">ช่องทางการติดต่อ</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone"></i> <span>+66 2 555-2000 ต่อ 1626, 1627</span></li>
+          <li><i class="fa-solid fa-print"></i> <span>+66 2 552-171</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:admission@kmutnb.ac.th">admission@kmutnb.ac.th</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">ข้อมูลเพิ่มเติม</h3>
+        <div class="campus-card">
+          <div class="campus-header">
+            <span><i class="fa-solid fa-building-columns"></i> วิทยาเขต</span>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+          </div>
+          <ul class="campus-list">
+            <li><a href="#">กรุงเทพมหานคร</a></li>
+            <li><a href="#">ระยอง</a></li>
+            <li><a href="#">ปราจีนบุรี</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© King Mongkut's University of Technology North Bangkok. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

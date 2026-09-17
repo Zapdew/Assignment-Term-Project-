@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตรวจสอบสถานะการสมัครเข้าศึกษา - มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: Prompt -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo-section">
+        <img src="/logo_kmutnb.png" alt="มจพ." class="logo">
+        <div class="title-group">
+          <h1 class="main-title">รับสมัครนักศึกษา</h1>
+          <p class="sub-title">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+        </div>
+    </div>
+  </header>
+
+ 
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/index.html" class="nav-link active"><i class="fa-solid fa-house"></i> หน้าแรก</a>
+      <a href="/schedule.html" class="nav-link"><i class="fa-solid fa-user-pen"></i> สมัครเรียน</a>
+      <a href="/check-status.html" class="nav-link"><i class="fa-solid fa-magnifying-glass"></i> ตรวจสอบสถานะ</a>
+      <a href="/search-faculty.html" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> ค้นหาคณะ / สาขา</a>
+    </div>
+  </nav>
+
+ 
+  <section class="page-header">
+    <h2>ตรวจสอบสถานะการสมัครเข้าศึกษา</h2>
+  </section>
+
+
+  <main class="check-status-section">
+    <div class="container check-status-container">
+      
+      <form action="#" method="GET" class="search-form">
+        <label for="citizen_id" class="search-label">กรอกเลขบัตรประจำตัวประชาชน</label>
+        
+        <div class="input-search-group">
+          <input 
+            type="text" 
+            id="citizen_id" 
+            name="citizen_id" 
+            placeholder="กรอกเลขบัตรประจำตัวประชาชน 13 หลัก" 
+            maxlength="13" 
+            required
+          >
+        </div>
+
+        <a href="status-result.html" class="btn-nav-link">ค้นหาข้อมูล</a>
+      </form>
+
+  
+      <div class="bottom-right-action">
+        <a href="index.html" class="btn-nav-link">กลับสู่หน้าแรก</a>
+      </div>
+
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      
+      <div class="footer-col">
+        <h3 class="footer-title">ติดต่อเรา</h3>
+        <p class="org-name">กลุ่มงานรับเข้าศึกษา กองบริการการศึกษา</p>
+        <p>สำนักงานอธิการบดี ชั้น 2 อาคาร TGGS</p>
+        <p>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
+        <p class="address-detail"><i class="fa-solid fa-location-dot"></i> 1518 ถนนประชาราษฎร์ 1 แขวงวงศ์สว่าง เขตบางซื่อ กรุงเทพฯ 10800</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">ช่องทางการติดต่อ</h3>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-phone"></i> <span>+66 2 555-2000 ต่อ 1626, 1627</span></li>
+          <li><i class="fa-solid fa-print"></i> <span>+66 2 552-171</span></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:admission@kmutnb.ac.th">admission@kmutnb.ac.th</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">ข้อมูลเพิ่มเติม</h3>
+        <div class="campus-card">
+          <div class="campus-header">
+            <span><i class="fa-solid fa-building-columns"></i> วิทยาเขต</span>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+          </div>
+          <ul class="campus-list">
+            <li><a href="#">กรุงเทพมหานคร</a></li>
+            <li><a href="#">ระยอง</a></li>
+            <li><a href="#">ปราจีนบุรี</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© King Mongkut's University of Technology North Bangkok. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
