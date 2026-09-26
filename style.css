@@ -1528,19 +1528,22 @@ body:has(#dept2_radio:checked) .major-dept2 {
 .btn-action:hover {
   background-color: #e6e6e6;
 }
-
+/* ซ่อนกลุ่มสาขาทั้งหมดไว้ก่อน */
 .major-group {
   display: none;
 }
 
+/* แสดงช่องสาขาเริ่มต้น (ยังไม่ได้เลือกคณะ) */
 #fac_none:checked ~ .search-faculty-form .major-group-default {
   display: flex;
 }
 
+/* แสดงเฉพาะสาขาของ คณะเทคโนโลยีและการจัดการอุตสาหกรรม */
 #fac_techno:checked ~ .search-faculty-form .major-group-techno {
   display: flex;
 }
 
+/* แสดงเฉพาะสาขาของ คณะวิศวกรรมศาสตร์ */
 #fac_eng:checked ~ .search-faculty-form .major-group-eng {
   display: flex;
 }
