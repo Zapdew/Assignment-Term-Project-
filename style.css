@@ -1528,3 +1528,19 @@ body:has(#dept2_radio:checked) .major-dept2 {
 .btn-action:hover {
   background-color: #e6e6e6;
 }
+
+.major-group {
+  display: none;
+}
+
+#fac_none:checked ~ .search-faculty-form .major-group-default {
+  display: flex;
+}
+
+#fac_techno:checked ~ .search-faculty-form .major-group-techno {
+  display: flex;
+}
+
+#fac_eng:checked ~ .search-faculty-form .major-group-eng {
+  display: flex;
+}

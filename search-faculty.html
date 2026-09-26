@@ -12,7 +12,6 @@
 </head>
 <body>
 
-
   <header class="header">
     <div class="container header-container">
       <div class="logo-section">
@@ -21,10 +20,9 @@
           <h1 class="main-title">รับสมัครนักศึกษา</h1>
           <p class="sub-title">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</p>
         </div>
-
+      </div>
     </div>
   </header>
-
 
   <nav class="navbar">
     <div class="container nav-container">
@@ -35,61 +33,82 @@
     </div>
   </nav>
 
-  
   <div class="empty-header-space"></div>
 
- 
   <main class="search-faculty-section">
     <div class="container search-faculty-container">
       
-      <form action="#" method="GET" class="search-faculty-form">
+     
+      <input type="radio" name="fac_toggle" id="fac_none" class="fac-radio-toggle" checked hidden>
+      <input type="radio" name="fac_toggle" id="fac_techno" class="fac-radio-toggle" hidden>
+      <input type="radio" name="fac_toggle" id="fac_eng" class="fac-radio-toggle" hidden>
+
+      <form action="/schedule.html" method="GET" class="search-faculty-form">
         <h2 class="search-faculty-title">ค้นหาคณะ / สาขาที่เปิดรับสมัคร</h2>
 
-  
+      
         <div class="form-row-group">
           <label for="round_type" class="form-label">ประเภทรอบการสมัคร</label>
           <div class="form-input-box">
             <select id="round_type" name="round_type">
-              <option value="" disabled selected></option>
+              <option value="" disabled selected>-- กรุณาเลือกรอบ --</option>
               <option value="1">โครงการสอบตรงข้อเขียนสำหรับผู้มีวุฒิ ปวช และ ม.6</option>
               <option value="2">โครงการสอบตรงข้อเขียนสำหรับผู้มีวุฒิ ปวส</option>
             </select>
           </div>
         </div>
 
+     
+        <div class="form-row-group">
+          <label for="faculty_select" class="form-label">คณะ</label>
+          <div class="form-input-box">
+            <select id="faculty_select" name="faculty" onchange="document.getElementById(this.value).checked = true;">
+              <option value="fac_none" disabled selected>-- กรุณาเลือกคณะ --</option>
+              <option value="fac_techno">คณะเทคโนโลยีและการจัดการอุตสาหกรรม</option>
+              <option value="fac_eng">คณะวิศวกรรมศาสตร์</option>
+            </select>
+          </div>
+        </div>
+
+       
+        <div class="form-row-group major-group major-group-default">
+          <label class="form-label">สาขา</label>
+          <div class="form-input-box">
+            <select disabled>
+              <option value="" selected>-- กรุณาเลือกสาขา --</option>
+            </select>
+          </div>
+        </div>
+
   
-        <div class="form-row-group">
-          <label for="round_type" class="form-label">คณะ</label>
+        <div class="form-row-group major-group major-group-techno">
+          <label for="major_techno" class="form-label">สาขา</label>
           <div class="form-input-box">
-            <select id="round_type" name="round_type">
-              <option value="" disabled selected></option>
-              <option value="1">คณะเทคโนโลยีและการจัดการอุตสาหกรรม</option>
-              <option value="2">คณะวิศวกรรมศาสตร์</option>
+            <select id="major_techno" name="major">
+              <option value="" disabled selected>-- กรุณาเลือกสาขา --</option>
+              <option value="IT">สาขาวิชาเทคโนโลยีสารสนเทศ (IT)</option>
+              <option value="ITI">สาขาวิชาเทคโนโลยีสารสนเทศ (ITI)</option>
+              <option value="ITT">สาขาวิชาเทคโนโลยีสารสนเทศ (ITT)</option>
+              <option value="INE">สาขาวิชาวิศวกรรมสารสนเทศและเครือข่าย (INE)</option>
+              <option value="INET">สาขาวิชาวิศวกรรมสารสนเทศและเครือข่าย (INET)</option>
             </select>
           </div>
         </div>
-
-
-        <div class="form-row-group">
-          <label for="round_type" class="form-label">สาขา</label>
-          <div class="form-input-box">
-            <select id="round_type" name="round_type">
-              <option value="" disabled selected></option>
-              <option value="1">สาขาวิชาเทคโนโลยีสารสนเทศ (IT)</option>
-              <option value="2">สาขาวิชาเทคโนโลยีสารสนเทศ (ITI)</option>
-              <option value="3">สาขาวิชาเทคโนโลยีสารสนเทศ (ITT)</option>
-              <option value="4">สาขาวิชาวิศวกรรมสารสนเทศและเครือข่าย (INE)</option>
-              <option value="5">สาขาวิชาวิศวกรรมสารสนเทศและเครือข่าย (INE)</option>     
-              <option value="6">สาขาวิชาวิศวกรรมเครื่องมือวัดและอัตโนมัติ (InAE)</option>         
-            </select>
-          </div>
-        </div>
-
-
-        <a href="/schedule.html" class="btn-nav-link">ค้นหาข้อมูล</a>
-      </form>
 
    
+        <div class="form-row-group major-group major-group-eng">
+          <label for="major_eng" class="form-label">สาขา</label>
+          <div class="form-input-box">
+            <select id="major_eng" name="major">
+              <option value="" disabled selected>-- กรุณาเลือกสาขา --</option>
+              <option value="InAE">สาขาวิชาวิศวกรรมเครื่องมือวัดและอัตโนมัติ (InAE)</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-nav-link">ค้นหาข้อมูล</button>
+      </form>
+
       <div class="bottom-right-action">
         <a href="index.html" class="btn-nav-link">กลับสู่หน้าแรก</a>
       </div>
